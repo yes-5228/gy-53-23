@@ -67,6 +67,19 @@ def init_db():
                 invoice_no TEXT NOT NULL UNIQUE,
                 status TEXT NOT NULL
             );
+
+            CREATE TABLE IF NOT EXISTS maintenance_orders (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                space_id INTEGER NOT NULL,
+                space_code TEXT NOT NULL,
+                title TEXT NOT NULL,
+                description TEXT,
+                status TEXT NOT NULL,
+                created_at TEXT NOT NULL,
+                closed_at TEXT,
+                remark TEXT,
+                FOREIGN KEY (space_id) REFERENCES spaces (id)
+            );
             """
         )
 

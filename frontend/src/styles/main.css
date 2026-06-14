@@ -234,6 +234,16 @@ select {
   color: #4c5964;
 }
 
+.status-pending {
+  background: #fff0c8;
+  color: #805600;
+}
+
+.status-closed {
+  background: #dff3ea;
+  color: #146346;
+}
+
 .form-panel {
   display: grid;
   gap: 14px;

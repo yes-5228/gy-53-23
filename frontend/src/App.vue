@@ -1,7 +1,8 @@
 <script setup>
 import { computed, ref } from "vue";
-import { BadgeDollarSign, Car, FileText, IdCard } from "lucide-vue-next";
+import { BadgeDollarSign, Car, FileText, IdCard, Wrench } from "lucide-vue-next";
 import InvoicePage from "./pages/InvoicePage.vue";
+import MaintenancePage from "./pages/MaintenancePage.vue";
 import MonthlyCardPage from "./pages/MonthlyCardPage.vue";
 import ParkingBillingPage from "./pages/ParkingBillingPage.vue";
 import SpaceMonitorPage from "./pages/SpaceMonitorPage.vue";
@@ -12,6 +13,7 @@ const tabs = [
   { key: "cards", label: "月卡办理", icon: IdCard, component: MonthlyCardPage },
   { key: "billing", label: "临停计费", icon: BadgeDollarSign, component: ParkingBillingPage },
   { key: "invoices", label: "电子发票", icon: FileText, component: InvoicePage },
+  { key: "maintenance", label: "维修工单", icon: Wrench, component: MaintenancePage },
 ];
 
 const currentComponent = computed(() => tabs.find((tab) => tab.key === current.value).component);
